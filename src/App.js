@@ -10,6 +10,10 @@ import Notfound from './components/NotFound/Notfound';
 import Services from './components/Services/Services';
 import Service from './components/Service/Service';
 import Detail from './components/Detail/Detail';
+import Footer from './components/Footer/Footer';
+import Training from './components/Training/Training';
+import About from './components/About/About';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -32,8 +36,14 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/support">
-            <Support></Support>
+          <Route path="/personal">
+            <Training></Training>
+          </Route>
+          <Route path="/about">
+            <About></About>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
           </Route>
           <Route path="*">
             <Notfound></Notfound>

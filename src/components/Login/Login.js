@@ -13,8 +13,9 @@ const Login = () => {
                     <br />
                     <input type="submit" value="Submit" />
                 </form>
-                <p>? <Link to="/register">Create Account</Link></p>
-                <div>-------or----------</div>
+                <p><Link to="/register">Create Account</Link></p>
+                <br />
+                <button>Google SignUp</button>
 
             </div>
         </div>
