@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Strength",
+        "img": "https://i.ibb.co/MS2yKgK/alexandra-tran-f-S3t-GOkp0x-Y-unsplash.jpg",
+        "description": "The highest quality health and fitness are available here..."
+    },
+    {
+        "id": 2,
+        "name": "No pain No gain",
+        "img": "https://i.ibb.co/s9mjLYC/brian-vo-cb-RZCj59-LZw-unsplash.jpg",
+        "description": "At its heart, strength training is based on functional movements — lifting, pushing, pulling — in order to build muscle and coordination needed for everyday activities"
+    },
+    {
+        "id": 3,
+        "name": "Feeling Good",
+        "img": "https://i.ibb.co/rFP0PpQ/damir-spanic-22-L7do1c-Oho-unsplash.jpg",
+        "description": "You don’t get better during workouts; you get better in between,” says Pire. “You should give yourself a day in between strength training."
+    },
+    {
+        "id": 4,
+        "name": "Hack of a Body",
+        "img": "https://i.ibb.co/PMCbXf7/daniel-apodaca-Wdo-Qio6-HPVA-unsplash.jpg",
+        "description": "If you knew that a certain type of exercise could benefit your heart, improve balance! Get started."
+    },
+    {
+        "id": 5,
+        "name": "Build perfect body",
+        "img": "https://i.ibb.co/2cHTRG3/edgar-chaparro-s-Hfo3-WOg-GTU-unsplash.jpg",
+        "description": "This benefit is the obvious one, but it shouldn’t be overlooked. “Muscle strength is crucial in making it easier to do the things you need to do on a day-to-day basic."
+    },
+    {
+        "id": 6,
+        "name": "Power Gym",
+        "img": "https://i.ibb.co/X8PYmXP/nathan-dumlao-w-Oj3-Fccbo-SU-unsplash.jpg",
+        "description": "At around age 30 we start losing as much as 3 to 5 percent of lean muscle mass per decade thanks to aging, notes Harvard Health Publishing."
+    }
+]
