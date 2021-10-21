@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { useState, } from 'react';
 import initializeAuth from "../../firebase/firebase.init";
 
@@ -6,11 +6,11 @@ import initializeAuth from "../../firebase/firebase.init";
 initializeAuth();
 
 const useFirebase = () => {
-    const [user, setUser] = useState({});
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
     const auth = getAuth();
+    const [user, setUser] = useState({});
+    const [error, setError] = useState('');
+
+
 
     const signInUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
@@ -18,20 +18,45 @@ const useFirebase = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 setUser(result.user);
+                setError('')
             })
+            .catch((error) => setError(error.message))
     }
-    const handleEmailChange = e => {
-        setEmail(e.target.value);
+    const handleLogout = () => {
+        signOut(auth).then(() => {
+            setUser({})
+        }).catch((error) => {
+            // An error happened.
+        });
     }
-    const handlePasswordChange = e => {
-        setPassword(e.target.value)
-    }
+
+
+    const handleUserRegister = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                console.log(result.user);
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+            });
+    };
+
+    const handleUserLogin = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                console.log(result.user);
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+            });
+    };
+
 
     return {
         user,
-        email,
-        password,
+        handleUserRegister,
         signInUsingGoogle,
+        handleUserLogin
     }
 }
 
